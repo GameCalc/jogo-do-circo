@@ -13,6 +13,8 @@ public class PlayerTutorial : MonoBehaviour {
     private GameObject flashlightUp;
     [SerializeField]
     private float flashLightDistance = 100;
+    [SerializeField]
+    private GameObject tutorialManager;
 
     //Para onde o jogador está se movendo
     //0 - baixo, 1 - direita, 2 - cima, 3 - esqueda
@@ -22,6 +24,7 @@ public class PlayerTutorial : MonoBehaviour {
     private Animator animator;
     private Vector2 direction;
     private GameObject enemy = null;
+    private bool pertoDaLanterna = false;
 
     // Use this for initialization
     private void Start () {
@@ -111,12 +114,16 @@ public class PlayerTutorial : MonoBehaviour {
     private void GetInput () {
         direction = Vector2.zero;
 
-        if (Input.GetKeyDown(KeyCode.Space) && !turnOnLightPressed) {
+        if (Input.GetKeyDown(KeyCode.Space) && !turnOnLightPressed && tutorialManager.GetComponent<TutorialManager>().PegouLanterna()) {
             turnOnLightPressed = true;
             if (flashLightOn)
                 TurnOffFlashlight();
             else
                 TurnOnFlashlight();
+        }
+
+        if (Input.GetKey(KeyCode.E) && pertoDaLanterna) {
+            tutorialManager.GetComponent<TutorialManager>().PegarLanterna();
         }
 
         if (Input.GetKeyUp(KeyCode.Space)) {
@@ -149,5 +156,20 @@ public class PlayerTutorial : MonoBehaviour {
 
         animator.SetFloat("x", direction.x);
         animator.SetFloat("y", direction.y);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.gameObject.tag == "Portao") {
+            tutorialManager.GetComponent<TutorialManager>().AtivarTextoPortao();
+        }else if (collision.gameObject.tag == "Lanterna") {
+            tutorialManager.GetComponent<TutorialManager>().ChegouPertoLanterna();
+            pertoDaLanterna = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Lanterna") {
+            pertoDaLanterna = false;
+        }
     }
 }

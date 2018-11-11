@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2cb9f33e1ad1c41a8c747e5ccd7021, type: 3}
+  m_Name: QuebraLimites
+  m_EditorClassIdentifier: 
+  cardImage: {fileID: 2800000, guid: 3f221e74c92025143b68ed4a5edb9801, type: 3}
+  cost: 3
+  defensePoints: 12
+  cardName: Quebra de limites
+  cardEffect: asdasdasdsad
