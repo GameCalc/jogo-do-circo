@@ -12,6 +12,10 @@ public class Enemy : MonoBehaviour {
     // Tempo que o inimigo tem que passar debaixo da lanterna para virar um objeto;
     [SerializeField]
     private int timeToFadeShadow = 3;
+    [SerializeField]
+    private Sprite imagemSombra;
+    [SerializeField]
+    private Sprite imagemObjeto;
 
     private SpriteRenderer sr;
     private GameObject player;
@@ -27,6 +31,7 @@ public class Enemy : MonoBehaviour {
     // Aqui o sprite renderer é pegado para que o objeto mude o sprite quando passa x tempo debaixo da luz
     void Start () {
         sr = GetComponent<SpriteRenderer>();
+        sr.sprite = imagemSombra;
 	}
 	
 	void FixedUpdate () {
@@ -56,7 +61,7 @@ public class Enemy : MonoBehaviour {
         if (underLight) {
     // Se estiver sob a luz da lanterna, então ele se transforma no objeto, parando de se mover até que a função TurnShadowOn seja chamado após y segundos, que é definido na variável timeToShadowBack
             canMove = false;
-            sr.color = Color.white;
+            sr.sprite = imagemObjeto;
             Invoke("TurnShadowOn", timeToShadowBack);
         }
         // Agora a variável que armazena se é a primeira vez que a luz bate no inimigo é resetada

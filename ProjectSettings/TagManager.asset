@@ -8,6 +8,7 @@ TagManager:
   - Lanterna
   - Light
   - Enemy
+  - Entrada
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Walls
   - Player
   - Enemy
-  - 
+  - "Interag\xEDveis"
   - 
   - 
   - 

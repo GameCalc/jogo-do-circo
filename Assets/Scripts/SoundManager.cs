@@ -8,9 +8,10 @@ public class SoundManager : MonoBehaviour {
     [SerializeField]
     private AudioSource sfxSource;
 
+    private float volume = 1f;
     private static SoundManager instance = null;
 
-    public SoundManager Instance {
+    public static SoundManager Instance {
         get {
             return instance;
         }
@@ -24,7 +25,12 @@ public class SoundManager : MonoBehaviour {
         }
         DontDestroyOnLoad(gameObject);
     }
-    
+
+    private void Start() {
+        musicSource.volume = volume;
+        sfxSource.volume = volume;
+    }
+
     public void PlaySFX(AudioClip sfx) {
         sfxSource.Stop();
         sfxSource.clip = sfx;
@@ -35,5 +41,14 @@ public class SoundManager : MonoBehaviour {
         musicSource.Stop();
         musicSource.clip = music;
         musicSource.Play();
+    }
+    
+    public void ChangeVolume(float NewVolume) {
+        musicSource.volume = NewVolume;
+        sfxSource.volume = NewVolume;
+    }
+
+    public float GetVolume() {
+        return volume;
     }
 }

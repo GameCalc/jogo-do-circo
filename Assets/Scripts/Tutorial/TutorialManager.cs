@@ -13,8 +13,6 @@ public class TutorialManager : MonoBehaviour {
     [SerializeField]
     private GameObject primeiroInimigo;
     [SerializeField]
-    private GameObject faca;
-    [SerializeField]
     private GameObject lanterna;
 
     private bool pegouLanterna = false;
@@ -22,13 +20,12 @@ public class TutorialManager : MonoBehaviour {
     void Start () {
         text1.SetActive(true);
         primeiroInimigo.SetActive(false);
-        faca.SetActive(false);
         lanterna.SetActive(false);
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        textoLanterna.GetComponent<Text>().text = "Uma lanterna, isso será útil.\nAperte " + GameManager.Instance.PegarTeclaAcao().ToString() + " para pegar e " + GameManager.Instance.PegarBotaoLuz().ToString() + " para usar a lanterna.";
 	}
 
     public bool PegouLanterna() {
@@ -48,6 +45,5 @@ public class TutorialManager : MonoBehaviour {
         pegouLanterna = true;
         primeiroInimigo.SetActive(true);
         lanterna.SetActive(false);
-        faca.SetActive(true);
     }
 }

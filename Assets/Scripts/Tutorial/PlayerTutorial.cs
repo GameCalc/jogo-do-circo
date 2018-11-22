@@ -1,48 +1,27 @@
 ﻿using UnityEngine;
 
-public class PlayerTutorial : MonoBehaviour {
-    [SerializeField]
-    private float speed = 1;
-    [SerializeField]
-    private GameObject flashlightDown;
-    [SerializeField]
-    private GameObject flashlightLeft;
-    [SerializeField]
-    private GameObject flashlightRight;
-    [SerializeField]
-    private GameObject flashlightUp;
-    [SerializeField]
-    private float flashLightDistance = 100;
+public class PlayerTutorial : Player {
     [SerializeField]
     private GameObject tutorialManager;
 
-    //Para onde o jogador está se movendo
-    //0 - baixo, 1 - direita, 2 - cima, 3 - esqueda
-    private int moving = 0;
-    private bool flashLightOn = false;
-    private bool turnOnLightPressed = false;
-    private Animator animator;
-    private Vector2 direction;
-    private GameObject enemy = null;
     private bool pertoDaLanterna = false;
 
-    // Use this for initialization
-    private void Start () {
-        animator = this.GetComponent<Animator>();
-    }
-
     // Update is called once per frame
-    private void Update () {
+    protected void Update() {
+        // Toda vez a luz é apagada e reacendida, uma vez que são 4 luzes no ambiente e o jogo precisa saber qual delas acender
         if (flashLightOn) {
             TurnOffFlashlight();
             TurnOnFlashlight();
-        } else {
+        }
+        else {
             TurnOffFlashlight();
         }
         GetInput();
+        // Verifica qual das luzes está ligada e traça um raio a partir dela, através da função VerifyHit
         if (flashlightDown.activeSelf) {
             VerifyHit(Vector2.down, transform);
-        }else if (flashlightUp.activeSelf) {
+        }
+        else if (flashlightUp.activeSelf) {
             VerifyHit(Vector2.up, transform);
         }
         else if (flashlightLeft.activeSelf) {
@@ -51,70 +30,12 @@ public class PlayerTutorial : MonoBehaviour {
         else if (flashlightRight.activeSelf) {
             VerifyHit(Vector2.right, transform);
         }
-	}
-
-    private void VerifyHit(Vector2 direction, Transform origin) {
-        RaycastHit2D hit = Physics2D.Raycast(origin.position, direction, flashLightDistance, LayerMask.GetMask("Enemy"));
-        if (hit.collider != null) {
-            hit.collider.gameObject.GetComponentInParent<Enemy>().SetUnderLight();
-            enemy = hit.collider.gameObject;
-        }
-    }
-
-    private void TurnOffFlashlight() {
-        flashlightDown.SetActive(false);
-        flashlightUp.SetActive(false);
-        flashlightLeft.SetActive(false);
-        flashlightRight.SetActive(false);
-        if(enemy != null)
-            enemy.GetComponentInParent<Enemy>().NotUnderLight();
-        enemy = null;
-        flashLightOn = false;
-    }
-
-    private void TurnOnFlashlight() {
-        switch (moving) {
-            case 0:
-                flashlightDown.SetActive(true);
-                break;
-            case 1:
-                flashlightRight.SetActive(true);
-                break;
-            case 2:
-                flashlightUp.SetActive(true);
-                break;
-            case 3:
-                flashlightLeft.SetActive(true);
-                break;
-        };
-        flashLightOn = true;
-    }
-
-    private void FixedUpdate() {
-        Move();
-    }
-
-    private void Move() {
-        transform.Translate(direction * speed * Time.deltaTime);
-        if (flashLightOn) {
-            float x = transform.position.x;
-            float y = transform.position.y;
-            flashlightDown.transform.position = new Vector3(x, y, flashlightDown.transform.position.z);
-            flashlightUp.transform.position = new Vector3(x, y, flashlightUp.transform.position.z);
-            flashlightLeft.transform.position = new Vector3(x, y, flashlightLeft.transform.position.z);
-            flashlightRight.transform.position = new Vector3(x, y, flashlightRight.transform.position.z);
-        }
-
-        if (direction.x != 0 || direction.y != 0)
-            AnimateMovement(direction);
-        else
-            animator.SetLayerWeight(1, 0);
     }
 
     private void GetInput () {
         direction = Vector2.zero;
 
-        if (Input.GetKeyDown(KeyCode.Space) && !turnOnLightPressed && tutorialManager.GetComponent<TutorialManager>().PegouLanterna()) {
+        if (Input.GetKeyDown(turnLight) && !turnOnLightPressed && tutorialManager.GetComponent<TutorialManager>().PegouLanterna()) {
             turnOnLightPressed = true;
             if (flashLightOn)
                 TurnOffFlashlight();
@@ -122,11 +43,11 @@ public class PlayerTutorial : MonoBehaviour {
                 TurnOnFlashlight();
         }
 
-        if (Input.GetKey(KeyCode.E) && pertoDaLanterna) {
+        if (Input.GetKey(actionButton) && pertoDaLanterna) {
             tutorialManager.GetComponent<TutorialManager>().PegarLanterna();
         }
 
-        if (Input.GetKeyUp(KeyCode.Space)) {
+        if (Input.GetKeyUp(turnLight)) {
             turnOnLightPressed = false;
         }
 
@@ -151,19 +72,14 @@ public class PlayerTutorial : MonoBehaviour {
         }
     }
 
-    private void AnimateMovement(Vector2 direction) {
-        animator.SetLayerWeight(1, 1);
-
-        animator.SetFloat("x", direction.x);
-        animator.SetFloat("y", direction.y);
-    }
-
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.gameObject.tag == "Portao") {
             tutorialManager.GetComponent<TutorialManager>().AtivarTextoPortao();
         }else if (collision.gameObject.tag == "Lanterna") {
             tutorialManager.GetComponent<TutorialManager>().ChegouPertoLanterna();
             pertoDaLanterna = true;
+        }else if (collision.gameObject.tag == "Entrada" && tutorialManager.GetComponent<TutorialManager>().PegouLanterna()) {
+            GameManager.Instance.SairDoTutorial();
         }
     }
 

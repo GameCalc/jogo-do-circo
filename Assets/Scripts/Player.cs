@@ -2,62 +2,70 @@
 
 public class Player : MonoBehaviour {
     [SerializeField]
-    private float speed = 1;
+    protected float speed = 1;
     [SerializeField]
-    private GameObject flashlightDown;
+    protected GameObject flashlightDown;
     [SerializeField]
-    private GameObject flashlightLeft;
+    protected GameObject flashlightLeft;
     [SerializeField]
-    private GameObject flashlightRight;
+    protected GameObject flashlightRight;
     [SerializeField]
-    private GameObject flashlightUp;
+    protected GameObject flashlightUp;
     [SerializeField]
-    private float flashLightDistance = 100;
+    protected float flashLightDistance = 100;
 
     // Define o botão que liga a luz
-    const KeyCode TURNLIGHT = KeyCode.Space;
+    protected KeyCode turnLight;
+    // Define o botão de interação
+    protected KeyCode actionButton;
 
     //Para onde o jogador está se movendo
     //0 - baixo, 1 - direita, 2 - cima, 3 - esqueda
-    private int moving = 0;
-    private bool flashLightOn = false;
+    protected int moving = 0;
+    protected bool flashLightOn = false;
     // Armazena se o botão para ligar a luz foi pressionado
-    private bool turnOnLightPressed = false;
-    private Animator animator;
-    private Vector2 direction;
-    private GameObject enemy = null;
+    protected bool turnOnLightPressed = false;
+    protected Animator animator;
+    protected Vector2 direction;
+    protected GameObject enemy = null;
 
     // Use this for initialization
-    private void Start () {
+    protected void Start () {
         animator = this.GetComponent<Animator>();
+        turnLight = GameManager.Instance.PegarBotaoLuz();
+        actionButton = GameManager.Instance.PegarTeclaAcao();
     }
 
     // Update is called once per frame
-    private void Update () {
-        // Toda vez a luz é apagada e reacendida, uma vez que são 4 luzes no ambiente e o jogo precisa saber qual delas acender
-        if (flashLightOn) {
-            TurnOffFlashlight();
-            TurnOnFlashlight();
-        } else {
-            TurnOffFlashlight();
-        }
+    protected void Update () {
         GetInput();
-        // Verifica qual das luzes está ligada e traça um raio a partir dela, através da função VerifyHit
-        if (flashlightDown.activeSelf) {
-            VerifyHit(Vector2.down, transform);
-        }else if (flashlightUp.activeSelf) {
-            VerifyHit(Vector2.up, transform);
-        }
-        else if (flashlightLeft.activeSelf) {
-            VerifyHit(Vector2.left, transform);
-        }
-        else if (flashlightRight.activeSelf) {
-            VerifyHit(Vector2.right, transform);
+        // Toda vez a luz é apagada e reacendida, uma vez que são 4 luzes no ambiente e o jogo precisa saber qual delas acender
+        if (!GameManager.Instance.EstaNoPicadeiro()) {
+            if (flashLightOn) {
+                TurnOffFlashlight();
+                TurnOnFlashlight();
+            }
+            else {
+                TurnOffFlashlight();
+            }
+            // Verifica qual das luzes está ligada e traça um raio a partir dela, através da função VerifyHit
+            if (flashlightDown.activeSelf) {
+                VerifyHit(Vector2.down, transform);
+            }
+            else if (flashlightUp.activeSelf) {
+                VerifyHit(Vector2.up, transform);
+            }
+            else if (flashlightLeft.activeSelf) {
+                VerifyHit(Vector2.left, transform);
+            }
+            else if (flashlightRight.activeSelf) {
+                VerifyHit(Vector2.right, transform);
+            }
         }
 	}
 
     // Essa função é responsável por traçar um raio de um ponto de origem até uma direção, verificando se há um inimigo no caminho
-    private void VerifyHit(Vector2 direction, Transform origin) {
+    protected void VerifyHit(Vector2 direction, Transform origin) {
         // Crie o 'raio' do ponto de origem em uma direção passada pelo script, com uma distância definida em flashLightDistance, colidindo somente na camada "Enemy", fazendo com que, se houver um inimigo no caminho, a retorne uma colisão
         RaycastHit2D hit = Physics2D.Raycast(origin.position, direction, flashLightDistance, LayerMask.GetMask("Enemy"));
         // Se existir a colisão então o inimigo está sob a luz da lanterna
@@ -69,7 +77,7 @@ public class Player : MonoBehaviour {
     }
 
     // Função para desligar as luzes
-    private void TurnOffFlashlight() {
+    protected void TurnOffFlashlight() {
         flashlightDown.SetActive(false);
         flashlightUp.SetActive(false);
         flashlightLeft.SetActive(false);
@@ -82,7 +90,7 @@ public class Player : MonoBehaviour {
     }
 
     // Função que liga uma das 4 luzes de acordo para onde o jogador está olhando
-    private void TurnOnFlashlight() {
+    protected void TurnOnFlashlight() {
         switch (moving) {
             case 0:
                 flashlightDown.SetActive(true);
@@ -100,11 +108,11 @@ public class Player : MonoBehaviour {
         flashLightOn = true;
     }
 
-    private void FixedUpdate() {
+    protected void FixedUpdate() {
         Move();
     }
 
-    private void Move() {
+    protected void Move() {
         transform.Translate(direction * speed * Time.deltaTime);
         if (flashLightOn) {
             float x = transform.position.x;
@@ -122,10 +130,10 @@ public class Player : MonoBehaviour {
             animator.SetLayerWeight(1, 0);
     }
 
-    private void GetInput () {
+    protected void GetInput () {
         direction = Vector2.zero;
 
-        if (Input.GetKeyDown(TURNLIGHT) && !turnOnLightPressed) {
+        if (Input.GetKeyDown(turnLight) && !turnOnLightPressed) {
             turnOnLightPressed = true;
             if (flashLightOn)
                 TurnOffFlashlight();
@@ -133,7 +141,7 @@ public class Player : MonoBehaviour {
                 TurnOnFlashlight();
         }
 
-        if (Input.GetKeyUp(TURNLIGHT)) {
+        if (Input.GetKeyUp(turnLight)) {
             turnOnLightPressed = false;
         }
 
@@ -158,7 +166,7 @@ public class Player : MonoBehaviour {
         }
     }
 
-    private void AnimateMovement(Vector2 direction) {
+    protected void AnimateMovement(Vector2 direction) {
         animator.SetLayerWeight(1, 1);
 
         animator.SetFloat("x", direction.x);
