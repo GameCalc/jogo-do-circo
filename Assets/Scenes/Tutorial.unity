@@ -961,6 +961,11 @@ Prefab:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 212457329417845720, guid: 2439e91e23b9d3143a1fcae36d3676bb,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2439e91e23b9d3143a1fcae36d3676bb, type: 2}
   m_IsPrefabParent: 0
@@ -1140,6 +1145,11 @@ Prefab:
         type: 2}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212189968902184020, guid: fc32ad93f7acaeb45b89db160ee7061e,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc32ad93f7acaeb45b89db160ee7061e, type: 2}

@@ -36,6 +36,13 @@ public class Enemy : MonoBehaviour {
 	
 	void FixedUpdate () {
         // Verifica se pode se mover, se sim, persiga o jogador
+        if (canMove && player != null) {
+            if (transform.position.x - player.transform.position.x < 0f) {
+                transform.rotation = new Quaternion(transform.rotation.x, -180f, transform.rotation.z, transform.rotation.w);
+            } else {
+                transform.rotation = new Quaternion(transform.rotation.x, 0f, transform.rotation.z, transform.rotation.w);
+            }
+        }
         if (canFollowPlayer && canMove) {
             float movingSpeed = speed * Time.deltaTime;
             if (underLight)
