@@ -241,6 +241,7 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\historiaInicial\historiaContoller.cs" />
     <Compile Include="Assets\Scripts\hud\hudbateria.cs" />
     <Compile Include="Assets\Scripts\hud\hudcoracao.cs" />
     <Compile Include="Assets\Scripts\Interacao\Battery.cs" />

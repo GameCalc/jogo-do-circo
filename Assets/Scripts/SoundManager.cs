@@ -42,6 +42,14 @@ public class SoundManager : MonoBehaviour {
         musicSource.clip = music;
         musicSource.Play();
     }
+
+    public void ContinueMusic() {
+        musicSource.Play();
+    }
+
+    public void PauseMusic() {
+        musicSource.Pause();
+    }
     
     public void ChangeVolume(float NewVolume) {
         musicSource.volume = NewVolume;

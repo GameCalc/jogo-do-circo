@@ -77,7 +77,7 @@ public class Enemy : MonoBehaviour {
 
     // Essa função só é responsável por definir que o inimigo virou uma sombra novamente, podendo perseguir o player quando for o caso
     private void TurnShadowOn() {
-        sr.color = Color.black;
+        sr.sprite = imagemSombra;
         canMove = true;
     }
 

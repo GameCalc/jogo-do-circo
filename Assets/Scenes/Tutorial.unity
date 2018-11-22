@@ -1124,7 +1124,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 69b49c4b81c0a7048a3da5dde788a910, type: 2}
+      objectReference: {fileID: 2100000, guid: 78395b9c4ffe712488a880ee50766cf3, type: 2}
     - target: {fileID: 212189968902184020, guid: fc32ad93f7acaeb45b89db160ee7061e,
         type: 2}
       propertyPath: m_Sprite

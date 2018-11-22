@@ -77,6 +77,10 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene("Tutorial");
     }
 
+    public void IrParaHistoria() {
+        SceneManager.LoadScene("HistoriaInicial");
+    }
+
     //HUD//
     //Os designers definirão se serão varias imagens ou se será uma imagem dinamica, neste caso estudar HUD dinâmico
 

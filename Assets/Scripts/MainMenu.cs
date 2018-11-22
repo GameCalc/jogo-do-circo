@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour {
 
 	public void PlayGame ()
     {
-        GameManager.Instance.IrParaTutorial();
+        GameManager.Instance.IrParaHistoria();
     }
 
     public void QuitGame ()
