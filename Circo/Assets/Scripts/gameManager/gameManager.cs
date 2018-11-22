@@ -12,6 +12,22 @@ public class gameManager : MonoBehaviour {
     // Pega o jogador no inspector
     public GameObject player;
 
+
+    // // // // variaveis do HUD // // // // 
+
+    // Verdadeiro se lanterna estiver ligada
+    //public bool lanternaligada;
+
+    // Variaveis da Lanterna
+
+    int baterias = 2;
+
+    // tempo necessário para gastar uma bateria se a lanterna estiver ligada
+    public float segundos = 10;
+    float oldTimer;
+    int nivelLanterna;
+    // // // // // // // // //
+
     public gameManager Instance
     {
         get
@@ -30,14 +46,16 @@ public class gameManager : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+        oldTimer = segundos;
+
         DontDestroyOnLoad(gameObject);
     }
 
    //HUD//
-   //Os designers definirão se serão varias imagens ou se será uma imagem dinamica, neste caso estudar HUD dinâmico
+   
     
     // Ao personagem receber o medo do inimigo, este metodo deve retornar o nivel do medo
-    void hudmudacoracao()
+    void hudMudaCoracao()
     {
         
         //codigo que vai fazer o personagem colidir com a sombra e aumentar medo
@@ -46,12 +64,31 @@ public class gameManager : MonoBehaviour {
         // Na classe hudcoracao, será chamda essa função e nela acontecerá a mudança da sprite
     }
 
-    // Esta função será chamada na classe hudbateria, onde mudará a imagem da bateria
-    void hudmudabateria()
+    // Esta função será chamada na classe hudbateria, onde gastará a bateria
+    public int GastaBateria(bool lanternaligada, int nivel)
     {
-        // codigo de gastar bateria
+        // código que gasta bateria
+        if (lanternaligada && nivel>1)
+        {
+            segundos -= Time.deltaTime;
+            if (segundos <= 0)
+            {
+                nivel=nivel-1;
+                segundos = 10;
+                return nivel;
+            }
+        }
+        // Recarrega a bateria da lanterna
+        if (Input.GetKeyDown(KeyCode.R) && baterias >= 1)
+        {
+            nivel = 7;
+            baterias = baterias - 1;
+            return nivel;
+        }
+
+        return nivel;
     }
-   
+    
     
     
     
@@ -59,6 +96,6 @@ public class gameManager : MonoBehaviour {
     // Este metodo fará a escolha da cena (ou level) que o player irá jogar
     void escolhelevel()
     {
-        // Alum meno vai passar o numero da fase que o jogador quer jogar e esta função fará o jogo mudar de cena
+        // Algum menu vai passar o numero da fase que o jogador quer jogar e esta função fará o jogo mudar de cena
     }
 }

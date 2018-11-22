@@ -23,6 +23,13 @@ public class Player : MonoBehaviour {
     private Vector2 direction;
     private GameObject enemy = null;
 
+    int nivelb;
+
+    //boolean para o script da lanterna que ira gastar a bateria receber
+    public static bool lantOn = false;
+
+
+
     // Use this for initialization
     private void Start () {
         animator = this.GetComponent<Animator>();
@@ -48,7 +55,15 @@ public class Player : MonoBehaviour {
         else if (flashlightRight.activeSelf) {
             VerifyHit(Vector2.right, transform);
         }
-	}
+
+        // Desligar Lanterna se Acabar Bateria
+        nivelb = hudlanterna.nivelb;
+        if (nivelb <= 1)
+        {
+            TurnOffFlashlight();
+        }
+
+    }
 
     private void VerifyHit(Vector2 direction, Transform origin) {
         RaycastHit2D hit = Physics2D.Raycast(origin.position, direction, flashLightDistance, LayerMask.GetMask("Enemy"));
@@ -114,9 +129,15 @@ public class Player : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && !turnOnLightPressed) {
             turnOnLightPressed = true;
             if (flashLightOn)
+            {
                 TurnOffFlashlight();
+                lantOn = false;
+            }
             else
+            {
                 TurnOnFlashlight();
+                lantOn = true;
+            }
         }
 
         if (Input.GetKeyUp(KeyCode.Space)) {
@@ -150,4 +171,7 @@ public class Player : MonoBehaviour {
         animator.SetFloat("x", direction.x);
         animator.SetFloat("y", direction.y);
     }
+   
+   
+    
 }

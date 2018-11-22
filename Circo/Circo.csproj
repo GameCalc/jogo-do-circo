@@ -243,6 +243,7 @@
     <Compile Include="Assets\Scripts\gameManager\gameManager.cs" />
     <Compile Include="Assets\Scripts\hud\hudbateria.cs" />
     <Compile Include="Assets\Scripts\hud\hudcoracao.cs" />
+    <Compile Include="Assets\Scripts\hud\hudlanterna.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Tutorial\EnemyTutorial.cs" />
