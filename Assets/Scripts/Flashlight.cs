@@ -37,23 +37,23 @@ public class Flashlight : MonoBehaviour {
         while (true) {
             yield return new WaitForSeconds(delay);
 
-            if(GameManager.instance.flashlightOn)
+            if(GameManager.Instance.flashlightOn)
                 FindIlluminatedEnemies();
         }
     }
 
     void Update () {
         if (Input.GetButtonDown("Flashlight") && enableFlashlight) {
-            GameManager.instance.UpdateFlashlight();
-            transform.parent.GetComponent<SpriteRenderer>().sortingOrder = GameManager.instance.flashlightOn ? 5 : 4;
+            GameManager.Instance.UpdateFlashlight();
+            transform.parent.GetComponent<SpriteRenderer>().sortingOrder = GameManager.Instance.flashlightOn ? 5 : 4;
         }
     }
 
     void LateUpdate () {
         lightMesh.Clear();
 
-        if (GameManager.instance.flashlightOn)
-            DrawLight();
+        //if (GameManager.Instance.flashlightOn)
+         //   DrawLight();
     }
 
     // Busca os inimigos que estão sendo iluminados

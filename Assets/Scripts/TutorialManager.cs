@@ -50,12 +50,12 @@ public class TutorialManager : MonoBehaviour {
                 break;
 
             case 6:
-                if (GameManager.instance.GetBatteriesCount() > 0)
+                if (GameManager.Instance.GetBatteriesCount() > 0)
                     NextStep();
                 break;
 
             case 7:
-                if (GameManager.instance.flashlightOn)
+                if (GameManager.Instance.flashlightOn)
                     NextStep();
                 break;
 

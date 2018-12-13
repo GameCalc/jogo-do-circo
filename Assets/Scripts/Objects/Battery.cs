@@ -8,7 +8,7 @@ public class Battery : MonoBehaviour {
 
     void Update()
     {
-        if (inRange && Input.GetButtonDown("Interact") && GameManager.instance.CollectBattery() && destroyWhenCollected)
+        if (inRange && Input.GetButtonDown("Interact") && GameManager.Instance.CollectBattery() && destroyWhenCollected)
             Destroy(gameObject);
     }
 

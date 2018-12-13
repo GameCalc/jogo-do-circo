@@ -2,13 +2,19 @@
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
-    public static GameManager instance = null;
+    private static GameManager instance = null;
 
     int batteriesCount;
     int maxCharges = 2;
 
     public float chargeDuration = 15;
     float timeCounter = 0;
+
+    public static GameManager Instance{
+        get{
+            return instance;
+        }
+    }
 
     [HideInInspector]
     public bool flashlightOn = false;
@@ -55,6 +61,10 @@ public class GameManager : MonoBehaviour {
     {
         return batteriesCount;
     }
+
+    public void LoadTutorial() {
+        SceneManager.LoadScene("Tutorial");
+;    }
 
     // Muda o estado da lanterna, se possível, e retorna o estado após a modificação
     public void UpdateFlashlight ()

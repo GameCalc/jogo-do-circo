@@ -2,21 +2,21 @@
 
 public class Player : MonoBehaviour {
     [SerializeField]
-    float speed = 1;
-    Animator animator;
-    Vector2 direction;
-    Flashlight flashlight;
+    protected float speed = 1;
+    protected Animator animator;
+    protected Vector2 direction;
+    protected Flashlight flashlight;
     [HideInInspector]
     public bool canMove = true;
 
     // Use this for initialization
-    void Start () {
+    protected void Start () {
         animator = this.GetComponent<Animator>();
         flashlight = this.GetComponentInChildren<Flashlight>();
     }
 
     // Update is called once per frame
-    void Update () {
+    protected void Update () {
         if (canMove)
         {
             Move();
