@@ -43,10 +43,8 @@ public class Flashlight : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetButtonDown("Flashlight") && enableFlashlight) {
+        if (Input.GetButtonDown("Flashlight") && enableFlashlight)
             GameManager.instance.UpdateFlashlight();
-            transform.parent.GetComponent<SpriteRenderer>().sortingOrder = GameManager.instance.flashlightOn ? 5 : 4;
-        }
     }
 
     void LateUpdate () {

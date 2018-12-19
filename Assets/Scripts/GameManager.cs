@@ -22,10 +22,6 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
-	// Use this for initialization
-	void Start () {
-	}
-
     void Update () {
         if (flashlightOn)
         {
@@ -33,8 +29,10 @@ public class GameManager : MonoBehaviour {
 
             if (timeCounter >= chargeDuration)
             {
-                if (batteriesCount > 0)
-                    batteriesCount--;
+                batteriesCount--;
+
+                if(batteriesCount == 0)
+                    UpdateFlashlight();
 
                 timeCounter = 0;
             }
@@ -56,7 +54,7 @@ public class GameManager : MonoBehaviour {
         return batteriesCount;
     }
 
-    // Muda o estado da lanterna, se possível, e retorna o estado após a modificação
+    // Muda o estado da lanterna, se possível.
     public void UpdateFlashlight ()
     {
         if (batteriesCount > 0 && !flashlightOn)
@@ -66,5 +64,7 @@ public class GameManager : MonoBehaviour {
         {
             flashlightOn = false;
         }
+
+        Player.instance.transform.GetComponent<SpriteRenderer>().sortingOrder = GameManager.instance.flashlightOn ? 5 : 4;
     }
 }

@@ -100,6 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1505513858960342, guid: 8ca41c09dfb5c5a458a8e4b3868906a9,
     type: 2}
+  audioManager: {fileID: 1854012541534974, guid: 4b55b0692697ec947b8a3eea87185c27,
+    type: 2}
 --- !u!114 &114267139398831156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  smoothSpeed: 1
+  smoothSpeed: 2
   movementOffset: {x: 5, y: 5}
   freezeX: 0
   freezeY: 0

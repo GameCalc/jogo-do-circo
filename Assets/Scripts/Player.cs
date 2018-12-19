@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 
 public class Player : MonoBehaviour {
+    public static Player instance = null;
+
     [SerializeField]
     float speed = 1;
     Animator animator;
@@ -8,6 +10,14 @@ public class Player : MonoBehaviour {
     Flashlight flashlight;
     [HideInInspector]
     public bool canMove = true;
+
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
+    }
 
     // Use this for initialization
     void Start () {
