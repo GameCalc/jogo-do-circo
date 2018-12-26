@@ -1,0 +1,908 @@
+fileFormatVersion: 2
+guid: fe7647a40d6f6df4083f3c7c293d1ebf
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bosskleb_0
+    21300002: bosskleb_1
+    21300004: bosskleb1
+    21300006: bosskleb_3
+    21300008: bosskleb2
+    21300010: bosskleb_5
+    21300012: bosskleb3
+    21300014: bosskleb_7
+    21300016: boss4
+    21300018: bosskleb_9
+    21300020: boss5
+    21300022: bosskleb_11
+    21300024: boss6
+    21300026: bosskleb_13
+    21300028: boss7
+    21300030: bosskleb_15
+    21300032: bosskleb_16
+    21300034: bosskleb_17
+    21300036: boss0
+    21300038: bosskleb_19
+    21300040: bosskleb_20
+    21300042: bosskleb_21
+    21300044: bosskleb_22
+    21300046: bosskleb_23
+    21300048: bosskleb_24
+    21300050: bosskleb_25
+    21300052: bosskleb_26
+    21300054: bosskleb_27
+    21300056: bosskleb_28
+    21300058: bosskleb_29
+    21300060: bosskleb_30
+    21300062: bosskleb_31
+    21300064: bosskleb_32
+    21300066: bosskleb_33
+    21300068: bosskleb_34
+    21300070: bosskleb_35
+    21300072: bosskleb_36
+    21300074: bosskleb_37
+    21300076: bosskleb_38
+    21300078: bosskleb_39
+    21300080: bosskleb_40
+    21300082: bosskleb_41
+    21300084: bosskleb_42
+    21300086: bosskleb_43
+    21300088: bosskleb_44
+    21300090: bosskleb_45
+    21300092: bosskleb_46
+    21300094: bosskleb_47
+    21300096: bosskleb_48
+    21300098: bosskleb_49
+    21300100: bosskleb_50
+    21300102: bosskleb_51
+    21300104: bosskleb_52
+    21300106: bosskleb_53
+    21300108: bosskleb_54
+    21300110: bosskleb_55
+    21300112: bosskleb_56
+    21300114: bosskleb_57
+    21300116: bosskleb_58
+    21300118: bosskleb_59
+    21300120: bosskleb_60
+    21300122: bosskleb_61
+    21300124: bosskleb_62
+    21300126: bosskleb_63
+    21300128: bosskleb_64
+    21300130: bosskleb_65
+    21300132: bosskleb_66
+    21300134: bosskleb_67
+    21300136: bosskleb_68
+    21300138: bosskleb_69
+    21300140: bosskleb_70
+    21300142: bosskleb_71
+    21300144: bosskleb_72
+    21300146: bosskleb_73
+    21300148: bosskleb_74
+    21300150: bosskleb_75
+    21300152: bosskleb_76
+    21300154: bosskleb_77
+    21300156: bosskleb_78
+    21300158: bosskleb_79
+    21300160: bosskleb_80
+    21300162: bosskleb_81
+    21300164: bosskleb_82
+    21300166: bosskleb_83
+    21300168: bosskleb_84
+    21300170: bosskleb_85
+    21300172: boss8
+    21300174: bosskleb_87
+    21300176: boss9
+    21300178: bosskleb_89
+    21300180: boss10
+    21300182: bosskleb_91
+    21300184: boss11
+    21300186: bosskleb_93
+    21300188: bosskleb12
+    21300190: bosskleb_95
+    21300192: bosskleb13
+    21300194: bosskleb_97
+    21300196: boss14
+    21300198: bosskleb_99
+    21300200: bosskleb15
+    21300202: bosskleb_101
+    21300204: bosskleb_102
+    21300206: bosskleb_103
+    21300208: bosskleb_104
+    21300210: bosskleb_105
+    21300212: bosskleb_106
+    21300214: bosskleb_107
+    21300216: bosskleb_108
+    21300218: bosskleb_109
+    21300220: bosskleb_110
+    21300222: bosskleb_111
+    21300224: bosskleb_112
+    21300226: bosskleb_113
+    21300228: bosskleb_114
+    21300230: bosskleb_115
+    21300232: bosskleb_116
+    21300234: bosskleb_117
+    21300236: bosskleb_118
+    21300238: bosskleb_119
+    21300240: bosskleb_120
+    21300242: bosskleb_121
+    21300244: bosskleb_122
+    21300246: bosskleb_123
+    21300248: bosskleb_124
+    21300250: bosskleb_125
+    21300252: bosskleb_126
+    21300254: bosskleb_127
+    21300256: bosskleb_128
+    21300258: bosskleb_129
+    21300260: bosskleb_130
+    21300262: bosskleb_131
+    21300264: bosskleb_132
+    21300266: bosskleb_133
+    21300268: bosskleb_134
+    21300270: bosskleb_135
+    21300272: bosskleb_136
+    21300274: bosskleb_137
+    21300276: bosskleb_138
+    21300278: bosskleb_139
+    21300280: bosskleb_140
+    21300282: bosskleb_141
+    21300284: bosskleb_142
+    21300286: bosskleb_143
+    21300288: bosskleb_144
+    21300290: bosskleb_145
+    21300292: bosskleb_146
+    21300294: bosskleb_147
+    21300296: bosskleb_148
+    21300298: bosskleb_149
+    21300300: bosskleb_150
+    21300302: bosskleb_151
+    21300304: bosskleb_152
+    21300306: bosskleb_153
+    21300308: bosskleb_154
+    21300310: bosskleb_155
+    21300312: bosskleb_156
+    21300314: bosskleb_157
+    21300316: bosskleb_158
+    21300318: bosskleb_159
+    21300320: bosskleb_160
+    21300322: bosskleb_161
+    21300324: bosskleb_162
+    21300326: bosskleb_163
+    21300328: bosskleb_164
+    21300330: bosskleb_165
+    21300332: bosskleb_166
+    21300334: bosskleb_167
+    21300336: bosskleb_168
+    21300338: bosskleb_169
+    21300340: bosskleb_170
+    21300342: bosskleb_171
+    21300344: bosskleb_172
+    21300346: bosskleb16
+    21300348: bosskleb_174
+    21300350: boss17
+    21300352: bosskleb_176
+    21300354: bosskleb18
+    21300356: bosskleb_178
+    21300358: boss19
+    21300360: bosskleb_180
+    21300362: boss20
+    21300364: bosskleb_182
+    21300366: bosskleb21
+    21300368: bosskleb_184
+    21300370: bosskleb22
+    21300372: bosskleb_186
+    21300374: bosskleb23
+    21300376: bosskleb_188
+    21300378: bosskleb_189
+    21300380: bosskleb_190
+    21300382: bosskleb_191
+    21300384: bosskleb_192
+    21300386: bosskleb_193
+    21300388: bosskleb_194
+    21300390: bosskleb_195
+    21300392: bosskleb_196
+    21300394: bosskleb_197
+    21300396: bosskleb_198
+    21300398: bosskleb_199
+    21300400: bosskleb_200
+    21300402: bosskleb_201
+    21300404: bosskleb_202
+    21300406: bosskleb_203
+    21300408: bosskleb_204
+    21300410: bosskleb_205
+    21300412: bosskleb_206
+    21300414: bosskleb_207
+    21300416: bosskleb_208
+    21300418: bosskleb_209
+    21300420: bosskleb_210
+    21300422: bosskleb_211
+    21300424: bosskleb_212
+    21300426: bosskleb_213
+    21300428: bosskleb_214
+    21300430: bosskleb_215
+    21300432: bosskleb_216
+    21300434: bosskleb_217
+    21300436: bosskleb_218
+    21300438: bosskleb_219
+    21300440: bosskleb_220
+    21300442: bosskleb_221
+    21300444: bosskleb_222
+    21300446: bosskleb_223
+    21300448: bosskleb_224
+    21300450: bosskleb_225
+    21300452: bosskleb_226
+    21300454: bosskleb_227
+    21300456: bosskleb_228
+    21300458: bosskleb_229
+    21300460: bosskleb_230
+    21300462: bosskleb_231
+    21300464: bosskleb_232
+    21300466: bosskleb_233
+    21300468: bosskleb_234
+    21300470: bosskleb_235
+    21300472: bosskleb_236
+    21300474: bosskleb_237
+    21300476: bosskleb_238
+    21300478: bosskleb_239
+    21300480: bosskleb_240
+    21300482: bosskleb_241
+    21300484: bosskleb_242
+    21300486: bosskleb_243
+    21300488: bosskleb_244
+    21300490: bosskleb_245
+    21300492: bosskleb_246
+    21300494: bosskleb_247
+    21300496: bosskleb_248
+    21300498: bosskleb_249
+    21300500: bosskleb_250
+    21300502: bosskleb_251
+    21300504: bosskleb_252
+    21300506: bosskleb_253
+    21300508: bosskleb_254
+    21300510: bosskleb_255
+    21300512: bosskleb_256
+    21300514: bosskleb_257
+    21300516: bosskleb_258
+    21300518: bosskleb24
+    21300520: bosskleb_260
+    21300522: bosskleb25
+    21300524: bosskleb_262
+    21300526: bossk26
+    21300528: bosskleb_264
+    21300530: bossk27
+    21300532: bosskleb_266
+    21300534: bossk28
+    21300536: bosskleb_268
+    21300538: bossk29
+    21300540: bosskleb_270
+    21300542: bossk30
+    21300544: bosskleb_272
+    21300546: boss31
+    21300548: bosskleb_274
+    21300550: bosskleb_275
+    21300552: bosskleb_276
+    21300554: bosskleb_277
+    21300556: bosskleb_278
+    21300558: bosskleb_279
+    21300560: bosskleb_280
+    21300562: bosskleb_281
+    21300564: bosskleb_282
+    21300566: bosskleb_283
+    21300568: bosskleb_284
+    21300570: bosskleb_285
+    21300572: bosskleb_286
+    21300574: bosskleb_287
+    21300576: bosskleb_288
+    21300578: bosskleb_289
+    21300580: bosskleb_290
+    21300582: bosskleb_291
+    21300584: bosskleb_292
+    21300586: bosskleb_293
+    21300588: bosskleb_294
+    21300590: bosskleb_295
+    21300592: bosskleb_296
+    21300594: bosskleb_297
+    21300596: bosskleb_298
+    21300598: bosskleb_299
+    21300600: bosskleb_300
+    21300602: bosskleb_301
+    21300604: bosskleb_302
+    21300606: bosskleb_303
+    21300608: bosskleb_304
+    21300610: bosskleb_305
+    21300612: bosskleb_306
+    21300614: bosskleb_307
+    21300616: bosskleb_308
+    21300618: bosskleb_309
+    21300620: bosskleb_310
+    21300622: bosskleb_311
+    21300624: bosskleb_312
+    21300626: bosskleb_313
+    21300628: bosskleb_314
+    21300630: bosskleb_315
+    21300632: bosskleb_316
+    21300634: bosskleb_317
+    21300636: bosskleb_318
+    21300638: bosskleb_319
+    21300640: bosskleb_320
+    21300642: bosskleb_321
+    21300644: bosskleb_322
+    21300646: bosskleb_323
+    21300648: bosskleb_324
+    21300650: bosskleb_325
+    21300652: bosskleb_326
+    21300654: bosskleb_327
+    21300656: bosskleb_328
+    21300658: bosskleb_329
+    21300660: bosskleb_330
+    21300662: bosskleb_331
+    21300664: bosskleb_332
+    21300666: bosskleb_333
+    21300668: bosskleb_334
+    21300670: bosskleb_335
+    21300672: bosskleb_336
+    21300674: bosskleb_337
+    21300676: bosskleb_338
+    21300678: bosskleb_339
+    21300680: bosskleb_340
+    21300682: bosskleb_341
+    21300684: bosskleb_342
+    21300686: bosskleb_343
+    21300688: bosskleb_344
+    21300690: bosskleb_345
+    21300692: bosskleb_2
+    21300694: bosskleb_4
+    21300696: bosskleb_6
+    21300698: bosskleb_8
+    21300700: bosskleb_10
+    21300702: bosskleb_12
+    21300704: bosskleb_14
+    21300706: bosskleb_18
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bosskleb_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_1
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_29
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_30
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bosskleb_31
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
