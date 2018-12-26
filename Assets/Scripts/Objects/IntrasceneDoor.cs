@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class IntrasceneDoor : MonoBehaviour
+public class IntrasceneDoor : Interactable
 {
     public enum Direction { North, East, South, West };
 
@@ -9,7 +9,6 @@ public class IntrasceneDoor : MonoBehaviour
     public Transform destinyGrid;
 
     Vector2 playerDisplacement;
-    bool inRange;
 
     void Start()
     {
@@ -33,24 +32,12 @@ public class IntrasceneDoor : MonoBehaviour
         }
     }
 
-    void Update()
+    protected override void OnInteract()
     {
-        if (inRange && Input.GetButtonDown("Interact") && !locked)
+        if (!locked)
         {
             Player.instance.transform.position = playerDisplacement;
             IntrasceneCamera.ChangeGrid(destinyGrid.position);
         }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-            inRange = true;
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-            inRange = false;
     }
 }

@@ -51,6 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0c4d8a8b2d457498a8f95f84ddc4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicVolume: 0
+  soundVolume: 1
   musics:
   - clip: {fileID: 8300000, guid: b6672ef121d008d47a7028153c1a2a5c, type: 3}
     name: Main Theme
