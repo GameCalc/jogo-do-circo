@@ -61,6 +61,8 @@
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\IntrasceneCamera.cs" />
+     <Compile Include="Assets\Scripts\Knife.cs" />
+     <Compile Include="Assets\Scripts\KnifeTrap.cs" />
      <Compile Include="Assets\Scripts\Loader.cs" />
      <Compile Include="Assets\Scripts\Objects\Battery.cs" />
      <Compile Include="Assets\Scripts\Objects\Door.cs" />
