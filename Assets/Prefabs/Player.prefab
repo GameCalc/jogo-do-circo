@@ -240,8 +240,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6650829bac0fa7e4990deba717c247cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ballInstance: {fileID: 1473452366227896, guid: ed1beb29c6e05ca4db68825558815026,
+    type: 2}
   speed: 2
   canMove: 1
+  carryingObject: 0
+  objectNearby: 0
 --- !u!212 &212977897442983768
 SpriteRenderer:
   m_ObjectHideFlags: 1

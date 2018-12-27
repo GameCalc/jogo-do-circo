@@ -17,20 +17,10 @@ public class BallProjectile : MonoBehaviour {
 	void Update () {
 		if (thrown) 
 			transform.Translate (throwDirection * Time.deltaTime * speed);
-
-		if (interactable && inRange && Input.GetButtonDown ("Interact"))
-			OnInteract ();
-	}
-
-	void OnInteract () {
-		Destroy (gameObject);
 	}
 
 	void OnTriggerEnter2D (Collider2D other)
     {
-		if (other.tag == "Player")
-			inRange = true;
-
 		if (thrown) {
 			if (other.tag == "Player") {
 				Debug.Log ("ACERTOU!");

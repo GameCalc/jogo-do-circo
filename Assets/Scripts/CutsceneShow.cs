@@ -10,7 +10,7 @@ public class CutsceneShow : MonoBehaviour {
     public void NextScene ()
     {
         if (currentHQ == scenes.Count - 1)
-            currentHQ = 0;
+            GameManager.instance.LoadTutorial();
         else
             currentHQ++;
 

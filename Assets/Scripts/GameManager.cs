@@ -5,9 +5,9 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
 
     int batteriesCount;
-    int maxCharges = 2;
+    int maxCharges = 6;
 
-    public float chargeDuration = 15;
+    public float chargeDuration = 5;
     float timeCounter = 0;
 
     [HideInInspector]
@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour {
 
                 timeCounter = 0;
             }
+
+            
         }        
     }
 
@@ -66,5 +68,9 @@ public class GameManager : MonoBehaviour {
         }
 
         Player.instance.transform.GetComponent<SpriteRenderer>().sortingOrder = GameManager.instance.flashlightOn ? 5 : 4;
+    }
+
+    public void LoadTutorial(){
+        SceneManager.LoadScene("Tutorial");
     }
 }
