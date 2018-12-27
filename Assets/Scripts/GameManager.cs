@@ -70,6 +70,10 @@ public class GameManager : MonoBehaviour {
         Player.instance.transform.GetComponent<SpriteRenderer>().sortingOrder = GameManager.instance.flashlightOn ? 5 : 4;
     }
 
+    public void StartGame(){
+        SceneManager.LoadScene("InitialStory");
+    }
+
     public void LoadTutorial(){
         SceneManager.LoadScene("Tutorial");
     }
