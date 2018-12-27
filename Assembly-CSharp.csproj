@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\KnifeTrap.cs" />
      <Compile Include="Assets\Scripts\Loader.cs" />
      <Compile Include="Assets\Scripts\Objects\Battery.cs" />
+     <Compile Include="Assets\Scripts\Objects\botoes.cs" />
      <Compile Include="Assets\Scripts\Objects\Door.cs" />
      <Compile Include="Assets\Scripts\Objects\IntrasceneDoor.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />

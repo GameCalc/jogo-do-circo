@@ -16,6 +16,8 @@ public class Player : MonoBehaviour {
     public bool objectNearby = false;
     private bool pressedThrow = false;
     private GameObject ball;
+    private GameObject bolinha;
+    private bool bolinhaBoss = false;
     private Sprite spriteBall;
 
     void Awake()
@@ -75,23 +77,32 @@ public class Player : MonoBehaviour {
         }
         else if (Input.GetAxis("Interact") == 1 && objectNearby && !carryingObject && !pressedThrow) {
             spriteBall = ball.GetComponent<SpriteRenderer>().sprite;
+            if(ball.transform.name.Contains("Ball"))
+                bolinhaBoss = true;
+            else
+                bolinhaBoss = false;
             Destroy(ball);
             ball = null;
             carryingObject = true;
             pressedThrow = true;
         }
         else if(carryingObject && Input.GetAxis("Interact") == 1 && !pressedThrow) {
-            GameObject bolinha = Instantiate(ballInstance);
+            bolinha = Instantiate(ballInstance);
             bolinha.transform.position = new Vector2(transform.position.x + lookingAt.x, transform.position.y + lookingAt.y);
             bolinha.GetComponent<SpriteRenderer>().sprite = spriteBall;
             bolinha.GetComponent<Rigidbody2D>().AddForce(lookingAt * 10f, ForceMode2D.Impulse);
             carryingObject = false;
             pressedThrow = true;
+
         }
         else if(Input.GetAxis("Interact") == 0)
             pressedThrow = false;
     }
 
+    void DestruirBolinha(){
+        if(bolinha != null)
+            Destroy(bolinha);
+    }
     public void AnimateMovement(Vector2 direction) {
         animator.SetLayerWeight(1, 1);
 

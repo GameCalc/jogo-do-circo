@@ -130,7 +130,7 @@ public class JugglerBoss : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D collision)
 	{
-		if (!collision.transform.name.Contains ("Ball")) {
+		if (!collision.transform.name.Contains ("Bola")) {
 
 			Vector2 direction = collision.contacts [0].point - (Vector2)transform.position;
 

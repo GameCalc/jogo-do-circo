@@ -7,4 +7,8 @@ public class menuCanvas : MonoBehaviour {
 	public void StartGame(){
 		GameManager.instance.StartGame();
 	}
+
+	public void ExitGame(){
+		Application.Quit();
+	}	
 }
